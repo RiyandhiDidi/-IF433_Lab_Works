@@ -6,7 +6,7 @@ fun main () {
 
     val grade = calculatorGrade(score)
 
-    println("Student: $name")
+    println("Student: ${name ?: "unknown"}")
     println("Score: $score")
     println("Grade: $grade")
 }
