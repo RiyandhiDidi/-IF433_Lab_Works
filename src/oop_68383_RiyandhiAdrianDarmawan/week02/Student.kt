@@ -10,4 +10,10 @@ class Student(
             println("WARNING: NIM tidak valid")
         }
     }
+
+    constructor(name: String, nim: String) : this(
+        name,
+        nim,
+        "Non-Matriculated"
+    )
 }
