@@ -45,4 +45,38 @@ fun main() {
 
     println("Denda: Rp ${loan.calculateFine()}")
 
+    print("Nama Hero: ")
+    val heroName = scanner.nextLine()
+
+    print("Damage Hero: ")
+    val damage = scanner.nextInt()
+
+    val hero = Hero(heroName, damage)
+    var enemyHp = 100
+
+    while (hero.isAlive() && enemyHp > 0) {
+        println("1. Serang | 2. Kabur")
+        val choice = scanner.nextInt()
+
+        if (choice == 1) {
+            hero.attack("Musuh")
+            enemyHp -= hero.baseDamage
+            println("HP Musuh: $enemyHp")
+
+            if (enemyHp > 0) {
+                val enemyDamage = (10..20).random()
+                hero.takeDamage(enemyDamage)
+                println("Hero terkena $enemyDamage, HP: ${hero.hp}")
+            }
+        } else {
+            println("Hero kabur!")
+            break
+        }
+    }
+
+    if (hero.hp > enemyHp) {
+        println("Hero Menang!")
+    } else {
+        println("Musuh Menang!")
+    }
 }
