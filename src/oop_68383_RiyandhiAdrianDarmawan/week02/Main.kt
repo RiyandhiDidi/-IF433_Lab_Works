@@ -16,9 +16,17 @@ fun main() {
         return
     }
 
-    print("Jurusan: ")
-    val major = scanner.nextLine()
+    print("Pilih jalur pendaftaran (1 = Lengkap, 2 = Tanpa Jurusan): ")
+    val choice = scanner.nextInt()
+    scanner.nextLine()
 
-    val student = student(name, nim, major)
-    println("Mahasiswa ${student.name} berhasil dibuat")
+    val student = if (choice == 1) {
+        print("Jurusan: ")
+        val major = scanner.nextLine()
+        student(name, nim, major)
+    } else {
+        student(name, nim)
+    }
+
+    println("Mahasiswa ${student.name} berhasil terdaftar")
 }
