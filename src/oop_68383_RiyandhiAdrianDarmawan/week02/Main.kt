@@ -7,5 +7,21 @@ fun main() {
 
     println("--- APLIKASI PMB UMN ---")
 
-    println("Masukkan nama")
+    println("Masukkan nama: ")
+    val name = Scanner.nextLine()
+
+    println("Masukkan NIM (Wajib 5 Karakter): ")
+    val nim = scanner.next()
+
+    scanner.nextLine()
+
+    if (nim.length !=5) {
+        println("ERROR: Pendaftaran dibatalkan. NIM harus 5 karakter!")
+    } else {
+        print("Masukkan Jurusan: ")
+        val major = scanner.nextLine()
+
+        val s1 = Student(name, nim, major)
+        println("Status: Pendaftaran Selesai.")
+    }
 }
