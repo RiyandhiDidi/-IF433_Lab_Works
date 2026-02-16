@@ -29,4 +29,20 @@ fun main() {
     }
 
     println("Mahasiswa ${student.name} berhasil terdaftar")
+
+    print("Judul Buku: ")
+    val title = scanner.nextLine()
+
+    print("Peminjam: ")
+    val borrower = scanner.nextLine()
+
+    print("Lama pinjam (hari): ")
+    var duration = scanner.nextInt()
+
+    if (duration < 0) duration = 1
+
+    val loan = Loan(title, borrower, duration)
+
+    println("Denda: Rp ${loan.calculateFine()}")
+
 }
