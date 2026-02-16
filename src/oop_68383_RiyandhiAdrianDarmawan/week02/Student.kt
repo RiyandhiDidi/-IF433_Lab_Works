@@ -5,7 +5,7 @@ class Student (
     val nim: String,
     var major: String,
 ) {
-    class Student(val name: String, val nim: String, var major: String) {
+    constructor(nim: String, name: String) : this(nim, name, "Non-Matriculated") {
         init {
 
             if (nim.length != 5) {

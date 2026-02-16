@@ -3,25 +3,22 @@ package oop_68383_RiyandhiAdrianDarmawan.week02
 import java.util.Scanner
 
 fun main() {
-    val scanner = Scanner(sourcer = System.`in`)
+    val scanner = Scanner(System.`in`)
 
-    println("--- APLIKASI PMB UMN ---")
+    print("Nama: ")
+    val name = scanner.nextLine()
 
-    println("Masukkan nama: ")
-    val name = Scanner.nextLine()
+    print("NIM: ")
+    val nim = scanner.nextLine()
 
-    println("Masukkan NIM (Wajib 5 Karakter): ")
-    val nim = scanner.next()
-
-    scanner.nextLine()
-
-    if (nim.length !=5) {
-        println("ERROR: Pendaftaran dibatalkan. NIM harus 5 karakter!")
-    } else {
-        print("Masukkan Jurusan: ")
-        val major = scanner.nextLine()
-
-        val s1 = Student(name, nim, major)
-        println("Status: Pendaftaran Selesai.")
+    if (nim.length != 5) {
+        println("NIM salah. Objek tidak dibuat.")
+        return
     }
+
+    print("Jurusan: ")
+    val major = scanner.nextLine()
+
+    val student = Student(name, nim, major)
+    println("Mahasiswa ${student.name} berhasil dibuat")
 }
