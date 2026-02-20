@@ -8,4 +8,4 @@ fun main() {
 
     println("Gaji bulanan: ${e.salary}")
     println("Gaji tahunan: ${e.yearlySalary}")
-}
+} // cleanup completed
