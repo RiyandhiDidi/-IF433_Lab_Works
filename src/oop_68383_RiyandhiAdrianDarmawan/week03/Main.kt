@@ -13,4 +13,8 @@ fun main() {
     weapon.damage = -50
     weapon.damage = 9999
     println("Tier senjata: ${weapon.tier}")
+
+    val player = Player("Riyan")
+    player.addXp(50)
+    player.addXp(60)
 } // cleanup completed
