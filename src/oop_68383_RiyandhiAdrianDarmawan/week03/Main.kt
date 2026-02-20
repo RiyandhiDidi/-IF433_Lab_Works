@@ -8,4 +8,9 @@ fun main() {
 
     println("Gaji bulanan: ${e.salary}")
     println("Gaji tahunan: ${e.yearlySalary}")
+
+    val weapon = Weapon("Pedang", 100)
+    weapon.damage = -50
+    weapon.damage = 9999
+    println("Tier senjata: ${weapon.tier}")
 } // cleanup completed
