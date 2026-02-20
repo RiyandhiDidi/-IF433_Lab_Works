@@ -1,5 +1,6 @@
 package oop_68383_riyandhiadriandarmawan.week02
 
+import oop_68383_RiyandhiAdrianDarmawan.week02.Student
 import java.util.Scanner
 
 fun main() {
@@ -23,9 +24,9 @@ fun main() {
     val student = if (choice == 1) {
         print("Jurusan: ")
         val major = scanner.nextLine()
-        student(name, nim, major)
+        Student(name, nim, major)
     } else {
-        student(name, nim)
+        Student(name, nim)
     }
 
     println("Mahasiswa ${student.name} berhasil terdaftar")
