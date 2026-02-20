@@ -12,4 +12,14 @@ class Employee(
                 field = value
             }
         }
+    private var performanceRating: Int = 0
+
+    fun updatePerformance(rating: Int) {
+        if (rating in 1..5) {
+            performanceRating = rating
+        } else {
+            println("Rating harus 1 sampai 5")
+        }
+    }
+}
 }
