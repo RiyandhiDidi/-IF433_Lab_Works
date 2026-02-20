@@ -21,5 +21,6 @@ class Employee(
             println("Rating harus 1 sampai 5")
         }
     }
-}
+    val yearlySalary: Int
+        get() = salary * 12
 }
