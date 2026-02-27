@@ -8,4 +8,8 @@ class Car(
     override fun honk() {
         println("$brand berbunyi: Toot toot!")
     }
+    override fun accelerate() {
+        super.accelerate()
+        println("$brand melaju lebih cepat dengan $numberOfDoors pintu.")
+    }
 }
