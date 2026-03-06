@@ -47,5 +47,7 @@ fun main() {
             method.processPayment(75000.0)
         }
 
+        // week05: final smart casting implementation
+
     }
 }
