@@ -12,4 +12,4 @@ fun main() {
     processCheckout(gopay, 50000.0)
     processCheckout(creditCard, 100000.0)
 
-}
+} // commit
