@@ -2,7 +2,7 @@ package oop_68383_RiyandhiAdrianDarmawan.week06
 
 interface Clickable {
 
-    var name: String = "Button"
+    val name: String
 
     fun click()
 
