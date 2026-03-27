@@ -17,4 +17,9 @@ fun main () {
 
     println(d1)
     println(d1 == d2)
+
+    val d3 = d1.copy(age = 21)
+
+    val (name, age) = d3
+    println("$name $age")
 }
