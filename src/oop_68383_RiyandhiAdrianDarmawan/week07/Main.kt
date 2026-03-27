@@ -30,4 +30,7 @@ fun main () {
         is ApiResponse.Error -> response.message
         is ApiResponse.Loading -> "Loading..."
     }
+
+    GameManager.startGame()
+    GameManager.startGame()
 }
