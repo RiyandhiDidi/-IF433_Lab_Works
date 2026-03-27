@@ -28,5 +28,6 @@ fun main () {
     val message = when (response) {
         is ApiResponse.Success -> response.data
         is ApiResponse.Error -> response.message
+        is ApiResponse.Loading -> "Loading..."
     }
 }
