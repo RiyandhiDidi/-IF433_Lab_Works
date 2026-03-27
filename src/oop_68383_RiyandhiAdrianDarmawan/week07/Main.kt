@@ -22,4 +22,11 @@ fun main () {
 
     val (name, age) = d3
     println("$name $age")
+
+    val response: ApiResponse = ApiResponse.Success("OK")
+
+    val message = when (response) {
+        is ApiResponse.Success -> response.data
+        is ApiResponse.Error -> response.message
+    }
 }
