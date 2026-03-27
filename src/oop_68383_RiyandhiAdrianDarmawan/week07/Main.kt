@@ -41,4 +41,9 @@ fun main () {
 
     val upgradedItem = weapon.item.copy(damage = 25)
     println(upgradedItem)
+
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin"))
+    processEvent(BattleState.LootDropped(upgradedItem))
+    processEvent(BattleState.GameOver("Keracunan"))
 }
