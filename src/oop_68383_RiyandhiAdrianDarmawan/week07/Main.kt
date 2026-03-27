@@ -33,4 +33,12 @@ fun main () {
 
     GameManager.startGame()
     GameManager.startGame()
+
+    println(ItemRarity.LEGENDARY.dropChance)
+
+    val weapon = Weapon.forgeStarterSword()
+    println(weapon.item)
+
+    val upgradedItem = weapon.item.copy(damage = 25)
+    println(upgradedItem)
 }
