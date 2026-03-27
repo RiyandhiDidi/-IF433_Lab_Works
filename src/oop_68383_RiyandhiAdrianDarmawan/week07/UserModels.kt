@@ -1,0 +1,3 @@
+package oop_68383_RiyandhiAdrianDarmawan.week07
+
+class User(val name: String, val age: Int)
