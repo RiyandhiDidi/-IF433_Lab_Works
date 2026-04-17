@@ -18,4 +18,9 @@ fun main() {
             println("String: $str")
         }
     }
+
+    for (item in items) {
+        val value = item as? String ?: "Not a String"
+        println(value)
+    }
 }
