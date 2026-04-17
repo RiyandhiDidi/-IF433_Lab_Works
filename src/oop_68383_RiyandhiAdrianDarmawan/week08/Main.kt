@@ -11,4 +11,11 @@ fun main() {
         println("City with let: $it")
     }
     val items: List<Any> = listOf("Hello", 123, "World", true)
+
+    for (item in items) {
+        val str = item as? String
+        if (str != null) {
+            println("String: $str")
+        }
+    }
 }
