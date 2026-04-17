@@ -32,4 +32,6 @@ fun main() {
 
     val result = LegacyJavaAPI.getData()!!
     println(result)
+
+    runMockUnitTest()
 }
