@@ -23,4 +23,4 @@ fun main() {
         val value = item as? String ?: "Not a String"
         println(value)
     }
-}
+} //
