@@ -23,4 +23,7 @@ fun main() {
         val value = item as? String ?: "Not a String"
         println(value)
     }
-} //
+
+    val text: String? = null
+    println(text!!)
+}
