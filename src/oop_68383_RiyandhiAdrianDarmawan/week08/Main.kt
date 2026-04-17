@@ -29,4 +29,7 @@ fun main() {
 
     val safeText = requireNotNull(text) { "Text cannot be null" }
     println(safeText)
+
+    val result = LegacyJavaAPI.getData()!!
+    println(result)
 }
