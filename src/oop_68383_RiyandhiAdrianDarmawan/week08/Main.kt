@@ -26,4 +26,7 @@ fun main() {
 
     val text: String? = null
     println(text!!)
+
+    val safeText = requireNotNull(text) { "Text cannot be null" }
+    println(safeText)
 }
