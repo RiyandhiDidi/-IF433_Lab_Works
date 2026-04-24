@@ -8,4 +8,7 @@ fun main() {
     val mutableNumbers = mutableListOf(1, 2, 3)
     mutableNumbers.add(4)
     println(mutableNumbers)
+
+    val uniqueNumbers = setOf(1, 2, 2, 3, 3, 4)
+    println(uniqueNumbers)
 }
