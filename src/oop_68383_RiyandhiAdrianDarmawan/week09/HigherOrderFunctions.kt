@@ -6,4 +6,7 @@ fun main() {
 
     val evenNumbers = numbers.filter { it % 2 == 0 }
     println(evenNumbers)
+
+    val squared = numbers.map { it * it }
+    println(squared)
 }
