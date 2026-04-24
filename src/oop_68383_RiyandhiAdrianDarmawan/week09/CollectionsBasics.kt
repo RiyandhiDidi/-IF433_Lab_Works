@@ -11,4 +11,10 @@ fun main() {
 
     val uniqueNumbers = setOf(1, 2, 2, 3, 3, 4)
     println(uniqueNumbers)
+
+    val studentMap = mapOf(
+        "A" to "Riyandhi",
+        "B" to "Adrian"
+    )
+    println(studentMap)
 }
