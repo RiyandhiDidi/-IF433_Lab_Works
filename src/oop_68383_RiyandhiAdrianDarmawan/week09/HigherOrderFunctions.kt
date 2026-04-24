@@ -9,4 +9,8 @@ fun main() {
 
     val squared = numbers.map { it * it }
     println(squared)
+
+    numbers
+        .sortedByDescending { it }
+        .forEach { println(it) }
 }
