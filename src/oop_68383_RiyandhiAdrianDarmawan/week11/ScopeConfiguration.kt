@@ -12,5 +12,8 @@ class User {
         }
 
         println(user.name)
+        user.also {
+            println("Debug User: ${it.name}")
+        }
     }
 }
