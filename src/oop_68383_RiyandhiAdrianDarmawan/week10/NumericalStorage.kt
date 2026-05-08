@@ -7,4 +7,9 @@ class NumericalStorage<T : Number>(
     fun toDoubleValue(): Double {
         return number.toDouble()
     }
+
+    fun <T> compareValues(a: T, b: T): Boolean
+            where T : Comparable<T> {
+        return a > b
+    }
 }
