@@ -16,4 +16,10 @@ fun main() {
 
     println(getData("Generic Return"))
     println(getData(500))
+
+    val numStore = NumericalStorage(200)
+    println(numStore.toDoubleValue())
+
+    println(compareValues(10, 5))
+    println(compareValues("B", "A"))
 }
