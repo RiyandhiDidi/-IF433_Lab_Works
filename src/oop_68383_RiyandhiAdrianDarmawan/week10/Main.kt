@@ -7,4 +7,7 @@ fun main() {
 
     val stringBox = Box("Hello Generic")
     println(stringBox.getValue())
+
+    val student = PairBox("68383", "Riyandhi")
+    student.printPair()
 }
