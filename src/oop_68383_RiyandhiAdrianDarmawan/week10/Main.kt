@@ -10,4 +10,10 @@ fun main() {
 
     val student = PairBox("68383", "Riyandhi")
     student.printPair()
+
+    printData(99.9)
+    printData("Kotlin")
+
+    println(getData("Generic Return"))
+    println(getData(500))
 }
