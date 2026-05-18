@@ -7,4 +7,23 @@ fun main() {
     }
 
     println(result)
+
+    val safeResult = runCatching {
+        10 / 0
+    }
+        .getOrElse {
+            -1
+        }
+
+    println(safeResult)
+
+    val recovered = runCatching {
+        10 / 0
+    }
+        .recover {
+            100
+        }
+
+    println(recovered.getOrNull())
 }
+
