@@ -25,5 +25,15 @@ fun main() {
         }
 
     println(recovered.getOrNull())
+
+    runCatching {
+        100 / 2
+    }
+        .onSuccess {
+            println("Success: $it")
+        }
+        .onFailure {
+            println("Failed: ${it.message}")
+        }
 }
 
