@@ -18,3 +18,21 @@ class BankAccount(
         println("Withdraw berhasil")
     }
 }
+
+fun main() {
+
+    val account = BankAccount(100)
+
+    try {
+        account.withdraw(200)
+
+    } catch (e: InsufficientFundsException) {
+        println(e.message)
+
+    } catch (e: ArithmeticException) {
+        println(e.message)
+
+    } catch (e: Exception) {
+        println("Unknown error")
+    }
+}
