@@ -10,4 +10,12 @@ fun main() {
     } finally {
         println("Program selesai")
     }
+
+    val result = try {
+        100 / 2
+    } catch (e: Exception) {
+        0
+    }
+
+    println(result)
 }
