@@ -22,15 +22,24 @@ fun loadTrades(path: String): List<TradeRecord> {
 
     fun fromCsvTrade(line: String): TradeRecord? {
 
-        val parts = line.split(",")
+        return try {
 
-        return TradeRecord(
-            parts[0],
-            parts[1],
-            parts[2],
-            parts[3].toDouble(),
-            parts[4].toInt()
-        )
+            val parts = line.split(",")
+
+            TradeRecord(
+                parts[0],
+                parts[1],
+                parts[2],
+                parts[3].toDouble(),
+                parts[4].toInt()
+            )
+
+        } catch (e: Exception) {
+
+            println("(Log) Data korup diabaikan: $line")
+
+            null
+        }
     }
     return File(path)
         .readLines()
