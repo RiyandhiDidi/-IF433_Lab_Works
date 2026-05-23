@@ -7,3 +7,7 @@ data class TradeRecord(
     val pnl: Double,
     val leverage: Int
 )
+
+fun TradeRecord.toCsv(): String {
+    return "$id,$pair,$position,$pnl,$leverage"
+}
