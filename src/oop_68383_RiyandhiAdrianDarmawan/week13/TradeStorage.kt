@@ -16,7 +16,9 @@ fun saveTrades(
 }
 
 fun loadTrades(path: String): List<TradeRecord> {
-
+    fun TradeRecord.toCsv(): String {
+        return "$id,$pair,$position,$pnl,$leverage"
+    }
     return File(path)
         .readLines()
         .map {
