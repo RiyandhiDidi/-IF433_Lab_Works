@@ -11,4 +11,8 @@ fun main() {
     println(file.readText())
 
     file.appendText("\nBaris Kedua")
+
+    file.readLines().forEach {
+        println(it)
+    }
 }
