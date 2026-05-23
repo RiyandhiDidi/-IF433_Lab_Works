@@ -9,4 +9,6 @@ fun main() {
     file.writeText("Hello File IO")
 
     println(file.readText())
+
+    file.appendText("\nBaris Kedua")
 }
