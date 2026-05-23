@@ -14,3 +14,12 @@ fun saveTrades(
         }
     }
 }
+
+fun loadTrades(path: String): List<TradeRecord> {
+
+    return File(path)
+        .readLines()
+        .map {
+            fromCsvTrade(it)!!
+        }
+}
