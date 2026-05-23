@@ -79,5 +79,5 @@ fun main() {
                 "(Opsional: Berikan chicken jerky secara manual)"
             )
         }
-} //
+}
 
