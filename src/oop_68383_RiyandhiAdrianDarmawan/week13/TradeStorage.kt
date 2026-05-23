@@ -7,12 +7,14 @@ fun saveTrades(
     path: String
 ) {
 
-    File(path).printWriter().use { writer ->
+    File(path)
+        .printWriter()
+        .use { writer ->
 
-        trades.forEach {
-            writer.println(it.toCsv())
+            trades.forEach {
+                writer.println(it.toCsv())
+            }
         }
-    }
 }
 
 fun loadTrades(path: String): List<TradeRecord> {
