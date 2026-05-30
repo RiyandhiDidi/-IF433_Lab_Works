@@ -50,3 +50,40 @@ class SafeOrderProcessor(
     private val repo: OrderRepository,
     private val notifier: NotificationService
 )
+
+interface PricingStrategy {
+
+    fun calculate(price: Double): Double
+}
+
+class VipPricing : PricingStrategy {
+
+    override fun calculate(price: Double): Double {
+        return price * 0.8
+    }
+}
+
+class RegularPricing : PricingStrategy {
+
+    override fun calculate(price: Double): Double {
+        return price * 0.9
+    }
+}
+
+class EcommerceTask(
+    private val repo: OrderRepository,
+    private val notifier: NotificationService
+) {
+
+    fun processOrder(
+        strategy: PricingStrategy,
+        price: Double
+    ) {
+
+        val finalPrice = strategy.calculate(price)
+
+        repo.saveOrder(finalPrice)
+
+        notifier.sendNotification()
+    }
+}
