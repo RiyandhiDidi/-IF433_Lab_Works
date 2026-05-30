@@ -18,3 +18,12 @@ class MongoDb : Database {
         println("Save MongoDB")
     }
 }
+
+class BetterUserService(
+    private val database: Database
+) {
+
+    fun register() {
+        database.save()
+    }
+}
