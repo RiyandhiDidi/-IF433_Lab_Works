@@ -13,3 +13,10 @@ class UserRepository {
         println("Save $username ke database")
     }
 }
+
+class EmailService {
+
+    fun sendEmail(username: String) {
+        println("Email dikirim ke $username")
+    }
+}
